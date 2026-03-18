@@ -1,0 +1,148 @@
+.cover {
+	width: 400px;
+	height: 600px;
+	background: url("../images/cover-blank.png") no-repeat center center;
+	background-size: 100%;
+	margin-left: 550px;
+	margin-top: 150px;
+	position: relative;
+
+}
+
+.book-title {
+	position: absolute;
+	top: 28px;
+	right: 16px;
+	font-family: 'Times New Roman', bold;
+	font-size: 15px;
+	text-align: right;
+	color: black;
+}
+
+.title-word {
+	display: block;
+	color: black;
+}
+
+.cover:hover .title-red-on-hover {
+	color: white;
+}
+
+.cover-hoop {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background: black;
+	transform: translate(-50%, -50%);
+	animation: hoop-morph 5s ease-in-out infinite alternate;
+	z-index: 1;
+}
+
+.cover-hoop-reverse {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background: black;
+	transform: translate(-50%, -50%);
+	animation: hoop-morph 5s ease-in-out infinite alternate-reverse;
+	z-index: 1;
+}
+
+.author {
+	position: absolute;
+	bottom: 150px;
+	right: 50px;
+	font-family: 'Times New Roman', bold;
+	font-size: 20px;
+	color: black;
+	transform: rotate(90deg);
+}
+
+.word1, .word2 {
+	position: absolute;
+	bottom: 0;
+}
+
+.word1 {
+	left: 0;
+	animation: swap1 5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.word2 {
+	left: 50px;
+	animation: swap2 5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes swap1 {
+	0% {
+		left: 0;
+	}
+
+	50% {
+		left: 60px;
+	}
+
+	100% {
+		left: 0;
+	}
+}
+
+@keyframes swap2 {
+	0% {
+		left: 50px;
+	}
+
+	50% {
+		left: 0;
+	}
+
+	100% {
+		left: 50px;
+	}
+}
+
+@keyframes hoop-morph {
+	0% {
+		width: 28px;
+		height: 28px;
+		background: black;
+		border: 0px solid black;
+	}
+
+	15% {
+		width: 28px;
+		height: 28px;
+		background: black;
+		border: 0px solid black;
+	}
+
+	25% {
+		background: transparent;
+		border: 2px solid black;
+	}
+
+	75% {
+		background: transparent;
+		border: 12px solid black;
+	}
+
+	85% {
+		width: 220px;
+		height: 220px;
+		background: transparent;
+		border: 12px solid black;
+	}
+
+	100% {
+		width: 220px;
+		height: 220px;
+		background: transparent;
+		border: 12px solid black;
+	}
+}
